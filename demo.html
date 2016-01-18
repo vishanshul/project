@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Login Page</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  function main()
+  {
+ var a,b;
+  a=document.getElementById("email").value;
+  b=document.getElementById("pwd").value;
+  localStorage.setItem("xyz",a);
+  localStorage.setItem("pqr",b);
+  }
+  
+   function valid()
+  {
+    a=document.getElementById("email").value;
+     b=document.getElementById("pwd").value;
+    if(a==null||a==""||b==null||b=="")
+   {
+  alert("plz fill all the details");
+  return false;
+   }
+   }
+ 
+  </script>
+</head>
+<body>
+<div class="row" style="background-color:#3b5998">
+<div class="col-sm-6">
+<h1 style="color:white";><p class="text-center">mymail</p></h1 style="color:white;">
+</div>
+<div class="col-sm-6">
+
+<form method="post" class="form-inline" role="form" action="dede.html" onsubmit="return valid()">
+<div class="form-group">
+
+<label for="email"><p style="color:azure;">Email address:</p></label><br/>
+<input type="email" class="form-control" id="email"></br>
+<div class="checkbox">
+<label><h6 style="color:azure;"><input type="checkbox" value="">keep me logged in</h6></label>
+</div>
+</div>
+
+<div class="form-group">
+
+
+<label for="pwd"><p style="color:azure;">password:</p></label></br>
+<input type="password" class="form-control" id="pwd"><br/>
+
+<a href="#"><h6 style="color:azure;">forgotten your password</h6></a>
+</div>
+<div class="form-group">
+
+<button type="submit" class="btn btn-info" onclick="main()" >Login</button></br>
+
+
+</div>
+
+</form>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Login Page</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+  function main()
+  {
+  var x,y;
+  x=localStorage.getItem("xyz");
+  y=localStorage.getItem("pqr");
+  document.getElementById("email").value=x;
+  document.getElementById("pwd").value=y;
+  }
+  
+  </script>
+</head>
+<body onload="main()">
+
+<form  class="form-inline" role="form">
+<div class="form-group">
+
+<label for="email"><p style="color:black;">Email address:</p></label><br/>
+<input type="email" class="form-control" id="email"></br>
+<label for="pwd"><p style="color:black;">password:</p></label></br>
+<input type="password" class="form-control" id="pwd"><br/>
+</div>
+</form>
+</body>
+</html>
